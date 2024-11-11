@@ -1,7 +1,8 @@
 
 # Supreme Court Appeals Outcome Prediction
 
-This project builds on a larger initiative (https://github.com/noambassat/VIrtual_Machine_Crawler) where we develeped **web crawler**  to scrape all Supreme Court cases in Israel from 1997. The focus here is to predict the outcomes of criminal appeal cases (both direct appeals and requests for appeal) brought before the Supreme Court.
+This project builds on a larger initiative (https://github.com/noambassat/VIrtual_Machine_Crawler) where we developed **web crawler**  to scrape all Supreme Court cases in Israel from 1997. The focus here is to predict the outcomes of criminal appeal cases (both direct appeals and requests for appeal) brought before the Supreme Court.
+
 
 
 ## Project Highlights
