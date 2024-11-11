@@ -1,7 +1,8 @@
 
 # Supreme Court Appeals Outcome Prediction
 
-This project builds on a larger initiative where a **web crawler** was developed to scrape all Supreme Court cases in Israel from 1997. The focus here is to predict the outcomes of criminal appeal cases (both direct appeals and requests for appeal) brought before the Supreme Court.
+This project builds on a larger initiative (https://github.com/noambassat/VIrtual_Machine_Crawler) where we develeped **web crawler**  to scrape all Supreme Court cases in Israel from 1997. The focus here is to predict the outcomes of criminal appeal cases (both direct appeals and requests for appeal) brought before the Supreme Court.
+
 
 ## Project Highlights
 
@@ -44,7 +45,7 @@ This project builds on a larger initiative where a **web crawler** was developed
 
 # חיזוי תוצאות ערעורים לבית המשפט העליון
 
-פרויקט זה ממשיך יוזמה רחבה יותר שבמסגרתה פותח **Web Crawler** לאתר את כל פסקי הדין מבית המשפט העליון בישראל משנת 1997. מטרת הפרויקט היא לחזות את תוצאות הערעורים הפליליים (ערעורים רגילים ובקשות רשות לערער) שהוגשו לבית המשפט העליון.
+פרויקט זה ממשיך יוזמה רחבה יותר (https://github.com/noambassat/VIrtual_Machine_Crawler) שבמסגרתה פיתחנו **Web Crawler** לאתר את כל פסקי הדין מבית המשפט העליון בישראל משנת 1997. מטרת הפרויקט היא לחזות את תוצאות הערעורים הפליליים (ערעורים רגילים ובקשות רשות לערער) שהוגשו לבית המשפט העליון.
 
 ## עיקרי הפרויקט
 
