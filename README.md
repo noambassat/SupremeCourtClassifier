@@ -41,9 +41,8 @@ This project includes Jupyter notebooks aimed at developing and evaluating Machi
 
 ## Getting Started
 
-To run the code and experiment with the models, follow these steps:
 
-1. **Clone the repository**:
+ **Clone the repository**:
    Copy the repository to your local machine using:
    ```bash
    git clone https://github.com/noambassat/SupremeCourtClassifier.git
