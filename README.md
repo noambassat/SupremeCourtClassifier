@@ -3,82 +3,61 @@
 
 This project builds on a larger initiative (https://github.com/noambassat/VIrtual_Machine_Crawler) where we developed **web crawler**  to scrape all Supreme Court cases in Israel from 1997. The focus here is to predict the outcomes of criminal appeal cases (both direct appeals and requests for appeal) brought before the Supreme Court.
 
+Supreme Court Classifier
+This repository contains a series of Jupyter notebooks dedicated to developing and evaluating machine learning models aimed at classifying decisions of the Supreme Court. The project encompasses data exploration, preprocessing, model training, and evaluation.
 
+Repository Structure
+1_explore_and_merge.ipynb: Initial data exploration and merging of datasets to prepare for model training.
 
-## Project Highlights
+2_first_classifier.ipynb: Development and training of the initial classification model, including feature engineering and model selection.
 
-1. **Dataset Preparation**:
-   - Extracted and processed appeal cases from the scraped data.
-   - Used **Legal He BERT** embeddings for text vectorization to handle Hebrew documents.
+3_Sample_for_Model_Prediction.ipynb: Sampling strategies implemented to create datasets for model prediction and validation.
 
-2. **Handling Imbalanced Data**:
-   - The dataset was imbalanced, with the minority class representing successful appeals.
-   - Applied **undersampling** with a 60:40 ratio for class 0 (unsuccessful appeals) to class 1 (successful appeals).
-   - Assigned a weight of 3:1 to the minority class during model training.
+4_explore_and_merge_RAP_AP.ipynb: Advanced data exploration and merging, focusing on specific subsets of the data.
 
-3. **Model and Techniques**:
-   - Used **Logistic Regression** for classification.
-   - Evaluated performance using **5-fold cross-validation**.
-   - Metrics calculated: accuracy, precision, recall, and F1-score.
+classifier_model.py: Python script containing the implementation of the classifier model.
 
-4. **Key Results**:
-   - **Mean Accuracy**: 97.31%
-   - **Mean Precision for Class 1**: 97.50%
-   - **Mean Recall for Class 1**: 95.28%
-   - **Mean F1 Score for Class 1**: 96.32%
-   - **Confusion Matrix**:
-     ```
-     [[70  1]
-      [ 2 41]]
-     ```
-     - **True Negatives (TN)**: 70
-     - **False Positives (FP)**: 1
-     - **False Negatives (FN)**: 2
-     - **True Positives (TP)**: 41
+Data Files
+full_data_with_predictions.xlsx: Comprehensive dataset including model predictions.
 
-5. **Conclusion**:
-   - The model demonstrated excellent performance, achieving high precision and recall for predicting successful appeals.
-   - The preprocessing steps, including the embedding generation and data balancing techniques, contributed to the model's success.
+class_distribution_by_year.xlsx: Analysis of class distribution over different years.
 
----
+Getting Started
+To explore the notebooks and replicate the analyses:
 
+Clone the repository:
 
+bash
+Copy code
+git clone https://github.com/noambassat/SupremeCourtClassifier.git
+Navigate to the project directory:
 
-# חיזוי תוצאות ערעורים לבית המשפט העליון
+bash
+Copy code
+cd SupremeCourtClassifier
+Install the required dependencies: Ensure you have a Python environment set up with the necessary packages. You can use pip to install the required packages:
 
-פרויקט זה ממשיך יוזמה רחבה יותר (https://github.com/noambassat/VIrtual_Machine_Crawler) שבמסגרתה פיתחנו **Web Crawler** לאתר את כל פסקי הדין מבית המשפט העליון בישראל משנת 1997. מטרת הפרויקט היא לחזות את תוצאות הערעורים הפליליים (ערעורים רגילים ובקשות רשות לערער) שהוגשו לבית המשפט העליון.
+bash
+Copy code
+pip install -r requirements.txt
+Note: If a requirements.txt file is not provided, you may need to manually install packages as you encounter import errors when running the notebooks.
 
-## עיקרי הפרויקט
+Open the notebooks: Launch Jupyter Notebook or JupyterLab:
 
-1. **עיבוד הנתונים**:
-   - חילוץ וניתוח תיקי ערעור מתוך הנתונים שנגרדו.
-   - שימוש ב-**Legal He - BERT** ליצירת embedding מותאם למסמכים בעברית.
+bash
+Copy code
+jupyter notebook
+or
 
-2. **התמודדות עם חוסר איזון בנתונים**:
-   - הנתונים היו לא מאוזנים, כאשר המקרים שבהם הערעור התקבל היוו את המיעוט.
-   - יישום **undersampling** ביחס של 60:40 לטובת כיתה 0 (ערעורים שנדחו).
-   - מתן משקל של 3:1 לטובת המיעוט במהלך אימון המודל.
+bash
+Copy code
+jupyter lab
+Then, open the desired notebook to explore the analyses.
 
-3. **מודל ושיטות**:
-   - שימוש ב-**Logistic Regression** למודל סיווג.
-   - הערכת הביצועים באמצעות **קרוס-ולידציה של 5 קפלים**.
-   - חישוב מדדים: דיוק (Accuracy), דיוק עבור הכיתה הקטנה (Precision), רגישות (Recall), ו-F1.
+Contributing
+Contributions to enhance the project are welcome. Feel free to fork the repository, make improvements, and submit a pull request.
 
-4. **תוצאות עיקריות**:
-   - **דיוק ממוצע**: 97.31%
-   - **דיוק ממוצע עבור כיתה 1**: 97.50%
-   - **רגישות ממוצעת עבור כיתה 1**: 95.28%
-   - **מדד F1 ממוצע עבור כיתה 1**: 96.32%
-   - **מטריצת בלבול**:
-     ```
-     [[70  1]
-      [ 2 41]]
-     ```
-     - **True Negatives (TN)**: 70
-     - **False Positives (FP)**: 1
-     - **False Negatives (FN)**: 2
-     - **True Positives (TP)**: 41
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-5. **מסקנות**:
-   - המודל הפגין ביצועים מצוינים, עם דיוק ורגישות גבוהים בחיזוי ערעורים שהתקבלו.
-   - שלבי העיבוד המקדימים, כולל יצירת embedding ושיטות לאיזון הנתונים, תרמו להצלחת המודל.
+Note: This README provides an overview of the project structure and instructions to get started. For detailed explanations and results, please refer to the individual notebooks.
